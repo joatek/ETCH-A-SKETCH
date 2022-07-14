@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Titan+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Etch-A-Sketch</h1>
+        </div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <button class="button" id="sizeButton" onclick="openFormSize()">Size</button>
+                <button class="button" id="colorButton">Color</button>
+            </div>
+            <div class="color-popup" id="formColor">
+                <form class="form-container color">
+                    <label for="color">Color</label>
+                    <input type="color" id="colorPicker" value="#ffffff">
+                </form>
+                <button class="btn" onclick="closeFormColor()">Enter</button>
+            </div>
+            <div class="size-popup" id="formSize">
+                <form class="form-container size">
+                    <label for="size">Size</label>
+                    <input type="number" id="size" name="size" min="1" max="100" placeholder="1" onchange="resizeBoard(this.value)">
+                </form>
+                <button class="btn" onclick="closeFormSize()">Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
